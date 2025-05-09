@@ -7,7 +7,7 @@ Basit ve kullanımı kolay bir şarkı sözleri arama uygulaması. Sadece HTML, 
 
 ## 📝 Proje Açıklaması
 
-Bu web uygulaması, kullanıcıların sanatçı ve şarkı adı girerek şarkı sözlerini anında bulmasını sağlar. Minimalist tasarımı ve kolay kullanımı ile dikkat çeker.
+Bu web uygulaması, kullanıcıların sanatçı ve şarkı adı girerek şarkı sözlerini anında bulmasını sağlar. Minimalist tasarımı ve kolay kullanımı ile dikkat çeker. Web sitesine https://sahindogruca.github.io adresi üzerinden ulaşabilirsiniz.
 
 ### Özellikler
 
@@ -67,32 +67,6 @@ lyrics-finder/
 └── README.md           # Bu dosya
 ```
 
-## 🔄 API Entegrasyonu
-
-Bu proje şarkı sözlerini getirmek için şu yöntemlerden birini kullanabilir:
-
-- Yerel bir JSON dosyasından veri okuma
-- Harici bir Lyrics API'si ile entegrasyon
-- (Özel API kullanıyorsanız, burada belirtebilirsiniz)
-
-## 🔧 Özelleştirme
-
-Projeyi kendi ihtiyaçlarınıza göre özelleştirmek için:
-
-1. CSS dosyasını düzenleyerek renk şemasını değiştirebilirsiniz
-2. JavaScript dosyasında arama algoritmasını geliştirebilirsiniz
-3. Yeni özellikler ekleyebilirsiniz (favorilere ekleme, geçmiş aramalar vb.)
-
 ## 📱 Responsive Tasarım
 
 Bu uygulama mobil cihazlar da dahil olmak üzere farklı ekran boyutlarına uyum sağlayacak şekilde tasarlanmıştır.
-
-## 🤝 Katkıda Bulunma
-
-Projeye katkıda bulunmak isteyenler için:
-
-1. Bu repository'yi fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Add some amazing feature'`)
-4. Branch'inize push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
