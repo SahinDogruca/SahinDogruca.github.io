@@ -1,0 +1,251 @@
+:root {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  --font-darker: #222831;
+  --font: #2a4759;
+  --gray-light: #eee;
+  --gray-lighter: #fff;
+  --gray: #ddd;
+  --bg-placeholder: #bbb;
+  --disabled-gray: #aaa;
+  --disabled-gray-light: #bbb;
+
+  --dark-font-darker: #e0e0e0; /* Açık gri (orijinalin tam tersi) */
+  --dark-font: #a0c4e0; /* Mavi tonunda açık renk */
+  --dark-gray-light: #333; /* Koyu gri */
+  --dark-gray-lighter: #444; /* Orta koyu gri */
+  --dark-gray: #555; /* Açık koyu gri */
+  --dark-bg-placeholder: #666; /* Gri placeholder */
+  --dark-disabled-gray: #777; /* Devre dışı gri */
+  --dark-disabled-gray-light: #666; /* Devre dışı açık gri */
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-lighter);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 40%;
+  max-height: 550px;
+  background-color: var(--gray);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.card-title {
+  color: var(--font);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-form {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.card-form form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group {
+  color: var(--font);
+  font-size: 1.6rem;
+}
+
+.input-group input {
+  flex: 2;
+  background-color: var(--gray-light);
+  border: none;
+  border: 1px solid var(--font);
+  color: var(--font);
+}
+
+.card-form input[type="text"] {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.card-form input[type="text"]:focus {
+  outline: none;
+  background-color: var(--gray-lighter);
+}
+
+.card-form input[type="text"]::placeholder {
+  color: var(--bg-placeholder);
+}
+
+#search,
+.btn_copy {
+  border: 1px solid var(--font);
+  display: block;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  padding: 4px 8px;
+  color: var(--font);
+  transition: all ease-in 0.2s;
+  background-color: var(--gray-light);
+}
+
+#search:hover,
+.btn_copy:hover:not(:disabled) {
+  transform: scale(1.1);
+  background-color: var(--gray-lighter);
+  color: var(--font-darker);
+}
+
+.btn_copy.copied {
+  background-color: #4CAF50;
+}
+
+.card-body {
+  border-top: 1px solid var(--gray-light);
+  padding: 10px 0px;
+}
+
+.card-body__header {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--font);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.btn_copy {
+  float: right;
+}
+
+.btn_copy:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled-gray-light);
+}
+
+.btn_copy:disabled:hover {
+  background-color: var(--disabled-gray);
+  transform: scale(0.9);
+}
+
+.lyrics {
+  max-height: 380px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  font-size: 1.5rem;
+  background-color: var(--gray-light);
+  padding: 0px;
+  border-radius: 10px;
+  color: var(--font);
+  height: 0;
+  transition: height 0.5s ease-in;
+}
+
+.active {
+  height: 380px;
+}
+
+.lyrics-line {
+  border-bottom: 0.5px solid var(--gray);
+  padding: 5px;
+}
+
+.lyrics-line:nth-child(even) {
+  background-color: var(--gray-lighter);
+}
+
+@media screen and (max-width: 1250px) {
+  .card {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .card {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card-form form {
+    flex-flow: column;
+    gap: 10px;
+  }
+
+  .lyrics {
+    max-height: 300px;
+  }
+}
+
+.dark-mode {
+  --font-darker: var(--dark-font-darker);
+  --font: var(--dark-font);
+  --gray-light: var(--dark-gray-light);
+  --gray-lighter: var(--dark-gray-lighter);
+  --gray: var(--dark-gray);
+  --bg-placeholder: var(--dark-bg-placeholder);
+  --disabled-gray: var(--dark-disabled-gray);
+  --disabled-gray-light: var(--dark-disabled-gray-light);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  color: var(--font);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Scrollbar Styles */
+.lyrics::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lyrics::-webkit-scrollbar-track {
+  background: var(--gray-light);
+}
+
+.lyrics::-webkit-scrollbar-thumb {
+  background: var(--gray);
+  border-radius: 4px;
+}
+
+.dark-mode .lyrics::-webkit-scrollbar-track {
+  background: var(--dark-gray);
+}
+
+.dark-mode .lyrics::-webkit-scrollbar-thumb {
+  background: var(--dark-gray-light);
+}

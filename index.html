@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <div class="container">
+      <div class="card">
+        <div class="card-title">Find Lyrics Instantly! ✨</div>
+        <div class="card-form">
+          <form>
+            <div class="input-group">
+              <label for="artist">Artist:</label>
+              <input
+                type="text"
+                name="artist"
+                placeholder="Metallica"
+                id="artist"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <label for="song">Song:</label>
+              <input
+                type="text"
+                name="song"
+                placeholder="Enter Sandman"
+                id="song"
+                required
+              />
+            </div>
+            <button type="submit" id="search">
+              <span>Search</span>
+              <span>🔎</span>
+            </button>
+          </form>
+        </div>
+        <div class="card-body">
+          <div class="card-body__header">
+            <span>Lyrics will be shown here 🎶</span>
+            <button disabled type="button" class="btn_copy">Copy</button>
+          </div>
+          <ul class="lyrics"></ul>
+          <!-- <div class="error">Nothing Found!</div> -->
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
